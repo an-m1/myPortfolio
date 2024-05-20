@@ -3,22 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Project Title</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ankit's Portfolio</title>
+    <!-- CSS for the Title Page -->
     <link rel="stylesheet" href="styles.css">
+     <!-- CSS for the About Me Page -->
+    <link rel="stylesheet" href="styles2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <header>
-        <!-- Header content here -->
+        <div class="container">
+            <h1>AM</h1>
+            <nav>
+                <div class="menu-toggle" id="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+
+                <!-- navbar -->
+                <ul class="nav-list">
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#publications">Publications</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <main>
-        <!-- Main content here -->
-    </main>
+    <div class="hero">
+        <!-- center caption -->
+        <div class="hero-content">
+            <span class="text1">Welcome</span>
+            <span class="text2">To my website</span>
+        </div>
+        <!-- scroll down icon -->
+        <div class="scroll-down">
+            <i class="fas fa-mouse"></i>
+            <span>Scroll Down</span>
+        </div>
 
-    <footer>
-        <!-- Footer content here -->
-    </footer>
+        <!-- background pattern -->
+        <section>
+            <div class='air air1'></div>
+            <div class='air air2'></div>
+            <div class='air air3'></div>
+            <div class='air air4'></div>
+          </section>
+    </div>
 
-    <script src="script.js"></script>
+    <div class="next-section" id="next-section">
+        <div class="profile-container">
+            <img src="https://github.com/an-m1/counterWebsite/blob/main/IMG_0489.jpg?raw=true" alt="Profile Image">
+            <div class="profile-description">
+                <p>Hi, I'm Ankit, a Computer Science BSc student at York University. Fascinated by creation since childhood, I've journeyed from crafting things together and assembling programs and websites. My passion for technology has led me to the world of robotics, blending creativity with digital innovation in various competitions.</p>
+                <button>Connect</button>
+            </div>
+        </div>
+    </div>
+
+
+   
+
+    <script src="scripts.js"></script>
 </body>
 </html>
