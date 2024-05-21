@@ -48,3 +48,139 @@
     cursor: pointer;
     border-radius: 5px;
 }
+
+/* Connections Tab */
+/* The side navigation menu */
+.sidenav {
+    height: 50%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 25%;
+    left: 25%;
+    background-color: #111; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  }
+  
+  /* The navigation menu links */
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+    z-index: 9999;
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  /* Position and style the close button (top right corner) */
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    z-index: 9999;
+  }
+  
+  /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+  #main {
+    transition: margin-left 0.5s;
+    padding: 20px;
+  }
+  
+  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+  @media screen and (max-height: 450px) {
+    .sidenav {
+      padding-top: 15px;
+    }
+    .sidenav a {
+      font-size: 18px;
+    }
+  }
+  
+  /* popup windows */
+  /* Popup background styling */
+  .popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure it's above other content */
+  }
+  
+  /* Popup content styling */
+  .popup-content {
+    background: #ffffff; /* White background */
+    padding: 30px;
+    border-radius: 10px; /* Rounded corners */
+    text-align: center;
+    width: 300px; /* Fixed width, or max-width for responsiveness */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+    margin: auto;
+    /* Centering the content using transform */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  /* Checkmark image style */
+  .popup-content:before {
+    content: "";
+    display: block;
+    width: 75px; /* Checkmark size */
+    height: 75px; /* Checkmark size */
+    background-image: url("https://github.com/an-m1/counterWebsite/blob/main/checked.png?raw=true");
+    background-size: cover;
+    margin: 0 auto 10px auto;
+  }
+  
+  .popup-header {
+    color: #333333; /* Dark text color */
+    margin-bottom: 20px;
+  }
+  
+  .popup-close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5em;
+    cursor: pointer;
+    border: none;
+    background: none;
+    color: #aaaaaa; /* Light gray color */
+  }
+  
+  .ok-btn {
+    background-color: #e91e63; /* Pink button color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 15px;
+    border-radius: 20px; /* Rounded button edges */
+    cursor: pointer;
+    outline: none;
+  }
+  
+  /* Ensure the text is similar to the image */
+  .popup-content p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555555; /* Medium gray text color */
+  }

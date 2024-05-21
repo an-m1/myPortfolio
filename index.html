@@ -7,7 +7,7 @@
     <title>Ankit's Portfolio</title>
     <!-- CSS for the Title Page -->
     <link rel="stylesheet" href="styles.css">
-     <!-- CSS for the About Me Page -->
+    <!-- CSS for the About Me Page -->
     <link rel="stylesheet" href="styles2.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -19,8 +19,6 @@
                 <div class="menu-toggle" id="hamburger">
                     <i class="fas fa-bars"></i>
                 </div>
-
-                <!-- navbar -->
                 <ul class="nav-list">
                     <li><a href="#about">About Me</a></li>
                     <li><a href="#education">Education</a></li>
@@ -35,24 +33,20 @@
     </header>
 
     <div class="hero">
-        <!-- center caption -->
         <div class="hero-content">
             <span class="text1">Welcome</span>
             <span class="text2">To my website</span>
         </div>
-        <!-- scroll down icon -->
-        <div class="scroll-down">
+        <div class="scroll-down" id="scroll-down">
             <i class="fas fa-mouse"></i>
             <span>Scroll Down</span>
         </div>
-
-        <!-- background pattern -->
         <section>
             <div class='air air1'></div>
             <div class='air air2'></div>
             <div class='air air3'></div>
             <div class='air air4'></div>
-          </section>
+        </section>
     </div>
 
     <div class="next-section" id="next-section">
@@ -60,13 +54,32 @@
             <img src="https://github.com/an-m1/counterWebsite/blob/main/IMG_0489.jpg?raw=true" alt="Profile Image">
             <div class="profile-description">
                 <p>Hi, I'm Ankit, a Computer Science BSc student at York University. Fascinated by creation since childhood, I've journeyed from crafting things together and assembling programs and websites. My passion for technology has led me to the world of robotics, blending creativity with digital innovation in various competitions.</p>
-                <button>Connect</button>
+                <button id="connectBtn" class="connect-button">Connect</button>
             </div>
         </div>
     </div>
 
+    <!-- Connections Tab -->
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a id="linkedIn-btn" href="#">LinkedIn</a>
+        <a id="indeed-btn" href="#">Indeed</a>
+        <a id="github-btn" href="#">GitHub</a>
+        <a id="discord-btn" href="#">Discord</a>
+        <a href="#">Email</a>
+    </div>
 
-   
+    <!-- The popup -->
+    <div id="popup" class="popup" style="display: none;">
+        <div class="popup-content">
+            <span class="popup-close-btn">&times;</span>
+            <div class="popup-header">
+                <h2>Thank You!</h2>
+            </div>
+            <p>The requested page has now been opened in a new tab.</p>
+            <button class="ok-btn">OK</button>
+        </div>
+    </div>
 
     <script src="scripts.js"></script>
 </body>
