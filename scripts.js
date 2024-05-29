@@ -1,70 +1,46 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const hamburger = document.getElementById('hamburger');
-    const navList = document.querySelector('.nav-list');
-    const scrollDown = document.getElementById('scroll-down');
-    const nextSection = document.getElementById('next-section');
-    const connectBtn = document.getElementById('connectBtn');
+document.addEventListener("DOMContentLoaded", () => {
+  const hamburger = document.getElementById("hamburger");
+  const navList = document.querySelector(".nav-list");
+  const scrollDown = document.getElementById("scroll-down");
+  const nextSection = document.getElementById("next-section");
 
-    const linkedinBtn = document.getElementById('linkedIn-btn');
-    const githubBtn = document.getElementById('github-btn');
-    const discordBtn = document.getElementById('discord-btn');
-    const indeedBtn = document.getElementById('indeed-btn');
+// NAVBAR HAMBURGER
 
-    const popup = document.getElementById('popup');
-    const closeBtn = document.querySelector('.popup-close-btn');
-    const okBtn = document.querySelector('.ok-btn');
+  hamburger.addEventListener("click", () => {
+    navList.classList.toggle("open");
+  });
 
-    hamburger.addEventListener('click', () => {
-        navList.classList.toggle('open');
-    });
-
-    scrollDown.addEventListener('click', () => {
-        nextSection.scrollIntoView({ behavior: 'smooth' });
-    });
-
-    connectBtn.addEventListener('click', () => {
-        openNav();
-    });
-
-    linkedinBtn.addEventListener('click', () => {
-        popup.style.display = "block";
-        window.open("https://www.linkedin.com/in/ankit-modhera", '_blank');
-    });
-
-    githubBtn.addEventListener('click', () => {
-        popup.style.display = "block";
-        window.open("https://github.com/an-m1", '_blank');
-    });
-
-    discordBtn.addEventListener('click', () => {
-        popup.style.display = "block";
-        window.open("https://discordapp.com/users/689113758068637722", '_blank');
-    });
-
-    indeedBtn.addEventListener('click', () => {
-        popup.style.display = "block";
-        window.open("https://profile.indeed.com/p/ankitm-wskg5mz", '_blank');
-    });
-
-    closeBtn.addEventListener('click', () => {
-        popup.style.display = "none";
-    });
-
-    okBtn.addEventListener('click', () => {
-        popup.style.display = "none";
-    });
-
-    window.addEventListener('click', (event) => {
-        if (event.target == popup) {
-            popup.style.display = "none";
-        }
-    });
+  scrollDown.addEventListener("click", () => {
+    nextSection.scrollIntoView({ behavior: "smooth" });
+  });
 });
 
-function openNav() {
-    document.getElementById("mySidenav").style.width = "250px";
+// CONNECTIONS TAB POPUP
+
+// Function to show the popup
+function showPopup() {
+  document.getElementById("popup").style.display = "block";
 }
 
-function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
+// Function to hide the popup
+function hidePopup() {
+  document.getElementById("popup").style.display = "none";
 }
+
+// Add click event listeners to social buttons
+document.querySelectorAll(".social-button").forEach((button) => {
+  button.addEventListener("click", function (event) {
+    event.preventDefault(); // Prevent the default action of opening the link
+    showPopup(); // Show the popup
+
+    // Open the social media link in a new tab
+    const url = this.getAttribute("href");
+    setTimeout(() => {
+      window.open(url, "_blank");
+    }, 5); // Delay to allow the popup to be seen before opening the link
+  });
+});
+
+// Add event listener to close the popup
+document.querySelector(".popup-close-btn").addEventListener("click", hidePopup);
+document.querySelector(".ok-btn").addEventListener("click", hidePopup);

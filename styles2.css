@@ -1,205 +1,142 @@
 .next-section {
-    height: 100vh;
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 20px;
+  height: 100vh;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
 }
 
 .profile-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    border: 2px solid #d9534f;
-    padding: 20px;
-    background-color: #fff;
-    height: 80vh; /* Adjust height as needed */
-    box-sizing: border-box; /* Ensure padding is included in the height */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: 2px solid #d9534f;
+  padding: 20px;
+  background-color: #fff;
+  height: 80vh; /* Adjust height as needed */
+  box-sizing: border-box; /* Ensure padding is included in the height */
 }
 
 .profile-container img {
-    flex-basis: 50%; /* Takes up half of the container */
-    height: 100%; /* Ensure it fills the height */
-    object-fit: cover; /* Cover the entire area */
+  flex-basis: 50%; /* Takes up half of the container */
+  height: 100%; /* Ensure it fills the height */
+  object-fit: cover; /* Cover the entire area */
 }
 
 .profile-description {
-    flex-basis: 50%; /* Takes up half of the container */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    box-sizing: border-box; /* Ensure padding is included in the width */
+  flex-basis: 50%; /* Takes up half of the container */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box; /* Ensure padding is included in the width */
 }
 
 .profile-description p {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .profile-description button {
-    padding: 10px 20px;
-    background-color: #d9534f;
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-.profile-description button:hover {
   padding: 10px 20px;
-  background-color: #78302d;
+  background-color: #d9534f;
   color: white;
   border: none;
   cursor: pointer;
   border-radius: 5px;
 }
 
-/* Connections Tab */
-/* The side navigation menu */
-.sidenav {
-    height: 50%; /* 100% Full-height */
-    width: 0; /* 0 width - change this with JavaScript */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Stay on top */
-    top: 25%;
-    left: 25%;
-    background-color: #111; /* Black*/
-    overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 60px; /* Place content 60px from the top */
-    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
-  }
-  
-  /* The navigation menu links */
-  .sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
-    z-index: 9999;
-  }
-  
-  /* When you mouse over the navigation links, change their color */
-  .sidenav a:hover {
-    color: #f1f1f1;
-  }
-  
-  /* Position and style the close button (top right corner) */
-  .sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-    z-index: 9999;
-  }
-  
-  /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
-  #main {
-    transition: margin-left 0.5s;
-    padding: 20px;
-  }
-  
-  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-  @media screen and (max-height: 450px) {
-    .sidenav {
-      padding-top: 15px;
-    }
-    .sidenav a {
-      font-size: 18px;
-    }
-  }
-  
-  /* popup windows */
-  /* Popup background styling */
-  .popup {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000; /* Ensure it's above other content */
-  }
-  
-  /* Popup content styling */
-  .popup-content {
-    background: #ffffff; /* White background */
-    padding: 30px;
-    border-radius: 10px; /* Rounded corners */
-    text-align: center;
-    width: 300px; /* Fixed width, or max-width for responsiveness */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    position: relative;
-    margin: auto;
-    /* Centering the content using transform */
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  
-  /* Checkmark image style */
-  .popup-content:before {
-    content: "";
-    display: block;
-    width: 75px; /* Checkmark size */
-    height: 75px; /* Checkmark size */
-    background-image: url("https://github.com/an-m1/counterWebsite/blob/main/checked.png?raw=true");
-    background-size: cover;
-    margin: 0 auto 10px auto;
-  }
-  
-  .popup-header {
-    color: #333333; /* Dark text color */
-    margin-bottom: 20px;
-  }
-  
-  .popup-close-btn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 1.5em;
-    cursor: pointer;
-    border: none;
-    background: none;
-    color: #aaaaaa; /* Light gray color */
-  }
-  
-  .ok-btn {
-    background-color: #e91e63; /* Pink button color */
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    text-transform: uppercase;
-    font-weight: bold;
-    margin-top: 15px;
-    border-radius: 20px; /* Rounded button edges */
-    cursor: pointer;
-    outline: none;
-  }
-  
-  /* Ensure the text is similar to the image */
-  .popup-content p {
-    font-size: 16px;
-    line-height: 1.6;
-    color: #555555; /* Medium gray text color */
-  }
+.profile-description button:hover {
+  background-color: #78302d;
+}
 
-  /* connect me social media buttons */
+/* Connections Tab - BS5 Offcanvas */
+/* popup windows */
+/* Popup background styling */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensure it's above other content */
+}
 
+/* Popup content styling */
+.popup-content {
+  background: #ffffff; /* White background */
+  padding: 30px;
+  border-radius: 10px; /* Rounded corners */
+  text-align: center;
+  width: 300px; /* Fixed width, or max-width for responsiveness */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  position: relative;
+  margin: auto;
+  /* Centering the content using transform */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
+/* Checkmark image style */
+.popup-content:before {
+  content: "";
+  display: block;
+  width: 75px; /* Checkmark size */
+  height: 75px; /* Checkmark size */
+  background-image: url("https://github.com/an-m1/counterWebsite/blob/main/checked.png?raw=true");
+  background-size: cover;
+  margin: 0 auto 10px auto;
+}
+
+.popup-header {
+  color: #333333; /* Dark text color */
+  margin-bottom: 20px;
+}
+
+.popup-close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.5em;
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: #aaaaaa; /* Light gray color */
+}
+
+.ok-btn {
+  background-color: #e91e63; /* Pink button color */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-top: 15px;
+  border-radius: 20px; /* Rounded button edges */
+  cursor: pointer;
+  outline: none;
+}
+
+/* Ensure the text is similar to the image */
+.popup-content p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555555; /* Medium gray text color */
+}
+
+/* connect me social media buttons */
 
 .svg-inline--fa {
-  vertical-align: -0.200em;
+  vertical-align: -0.2em;
 }
 
 .rounded-social-buttons {
@@ -226,13 +163,19 @@
   margin-bottom: 0.25rem;
 }
 
-.rounded-social-buttons .social-button:hover, .rounded-social-buttons .social-button:focus {
+.rounded-social-buttons .social-button:hover,
+.rounded-social-buttons .social-button:focus {
   -webkit-transform: rotate(360deg);
-      -ms-transform: rotate(360deg);
-          transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  transform: rotate(360deg);
 }
 
-.rounded-social-buttons .fa-twitter, .fa-facebook-f, .fa-linkedin, .fa-tiktok, .fa-youtube, .fa-instagram {
+.rounded-social-buttons .fa-twitter,
+.fa-facebook-f,
+.fa-linkedin,
+.fa-tiktok,
+.fa-youtube,
+.fa-instagram {
   font-size: 25px;
 }
 
@@ -240,7 +183,8 @@
   background: #3b5998;
 }
 
-.rounded-social-buttons .social-button.facebook:hover, .rounded-social-buttons .social-button.facebook:focus {
+.rounded-social-buttons .social-button.facebook:hover,
+.rounded-social-buttons .social-button.facebook:focus {
   color: #3b5998;
   background: #fefefe;
   border-color: #3b5998;
@@ -250,7 +194,8 @@
   background: #55acee;
 }
 
-.rounded-social-buttons .social-button.twitter:hover, .rounded-social-buttons .social-button.twitter:focus {
+.rounded-social-buttons .social-button.twitter:hover,
+.rounded-social-buttons .social-button.twitter:focus {
   color: #55acee;
   background: #fefefe;
   border-color: #55acee;
@@ -260,7 +205,8 @@
   background: #007bb5;
 }
 
-.rounded-social-buttons .social-button.linkedin:hover, .rounded-social-buttons .social-button.linkedin:focus {
+.rounded-social-buttons .social-button.linkedin:hover,
+.rounded-social-buttons .social-button.linkedin:focus {
   color: #007bb5;
   background: #fefefe;
   border-color: #007bb5;
@@ -270,7 +216,8 @@
   background: #000000;
 }
 
-.rounded-social-buttons .social-button.tiktok:hover, .rounded-social-buttons .social-button.tiktok:focus {
+.rounded-social-buttons .social-button.tiktok:hover,
+.rounded-social-buttons .social-button.tiktok:focus {
   color: #000000;
   background: #fefefe;
   border-color: #000000;
@@ -280,7 +227,8 @@
   background: #bb0000;
 }
 
-.rounded-social-buttons .social-button.youtube:hover, .rounded-social-buttons .social-button.youtube:focus {
+.rounded-social-buttons .social-button.youtube:hover,
+.rounded-social-buttons .social-button.youtube:focus {
   color: #bb0000;
   background: #fefefe;
   border-color: #bb0000;
@@ -290,7 +238,8 @@
   background: #125688;
 }
 
-.rounded-social-buttons .social-button.instagram:hover, .rounded-social-buttons .social-button.instagram:focus {
+.rounded-social-buttons .social-button.instagram:hover,
+.rounded-social-buttons .social-button.instagram:focus {
   color: #125688;
   background: #fefefe;
   border-color: #125688;
